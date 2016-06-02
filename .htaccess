@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^(www\.)?svatbamartinkyalukase\.dev$
+RewriteRule ^$ www/ [L]
+RewriteCond %{HTTP_HOST} ^(www\.)?svatbamartinkyalukase\.dev$
+RewriteRule (.*) www/$1 [L]
+

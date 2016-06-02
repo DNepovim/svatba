@@ -1,5 +1,11 @@
 {block title}Dary{/block}
 {block content}
+    <nav class="nav" role="navigation">
+        <a class="item" href="/">Úvod</a><!--
+    --><a class="item" href="/">Praktické informace</a><!--
+    --><a class="item" href="/">Jak šel čas</a><!--
+    --><a class="item active" href="/dary">Svatební dary</a>
+    </nav>
     <div class="filters container">
     <div class="sort buttons-box" xmlns:n="http://www.w3.org/1999/xhtml">
         <p class="text">Seřadit podle</p><!--
@@ -13,15 +19,17 @@
         --><button class="rule" data-filter=".reserved">rezervované</button>
     </div>
     </div>
-    {snippet reserveForm}
-        {*{control daryForm}*}
-    {/snippet}
+    <div n:foreach="$flashes as $flash"
+         class='flash {$flash->type}'>{$flash->message}
+    </div>
     <div class="container gifts">
         {foreach $gifts as $item}
             <div n:class="item, $item->reserved == 1 ? reserved : not-reserved" data-category="{!$item->cost_int}">
                 <h2 class="title" n:if="!empty($item->name)">{!$item->name}</h2>
                 {if is_file($absPath.'/dist/img/dary/'.$item->id.'.jpg')}
-                    <img class="thumb" height="170" src="{$baseUrl}/dist/img/dary/{$item->id}.jpg">
+                    {*<img class="thumb" height="auto" src="{$baseUrl}/dist/img/dary/{$item->id}.jpg">*}
+                    {var $img = $baseUrl.'/dist/img/dary/'.$item->'id.jpg'}
+                    <img class="thumb" src="{'$img@Resize;150;150;exact'}">
                 {/if}
                 <p class="desc" n:if="!empty($item->description)">{!$item->description}</p>
                 <p class="cost" n:if="!empty($item->cost)">{!$item->cost}</p>

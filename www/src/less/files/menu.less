@@ -1,4 +1,28 @@
-.nav {}
-.nav .item {display: inline-block; padding: 0.32em 1em; color: @black; border-left: solid 1px @black; transition: color 300ms, background 300ms}
+.nav {margin: 2rem auto; text-align: center}
+.nav .item {position: relative; display: inline-block; color: @black; letter-spacing: 0.2em; line-height: 0.3em; padding: 0.32em 1em; border-left: solid 1px @black; transition: color 300ms, background 300ms}
 .nav .item:last-of-type {border-right: solid 1px @black}
-.nav .item:hover {background: black; color: white}
+//.nav .item:hover {background: black; color: white}
+.nav .item.active { text-shadow: 0 0 0.2px @black}
+.nav .item:hover:after {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  -o-transform: scaleX(1);
+  transform: scaleX(1);
+}
+.nav .item:after{
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 1px;
+  bottom: -5px;
+  left: 5%;
+  background-color: @grey;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all .3s ease-in-out 0s;
+  -o-transition: all .3s ease-in-out 0s;
+  transition: all .3s ease-in-out 0s;}

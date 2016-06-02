@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "87fa8cd78584e190fa85f3d8ef595959",
-    "content-hash": "990f9bfd015bacc43c375306f81c32e1",
+    "hash": "77f9bfddcb08190df7823b93569193d8",
+    "content-hash": "31d40adf591547058152467639e3add1",
     "packages": [
         {
             "name": "latte/latte",
@@ -981,6 +981,110 @@
             "description": "Nette Utility Classes",
             "homepage": "https://nette.org",
             "time": "2016-03-18 17:36:54"
+        },
+        {
+            "name": "pavlista/nette-palette",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MichaelPavlista/nette-palette.git",
+                "reference": "04a8db9924c6bc9518e4e17cca636a7db5cd58ad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MichaelPavlista/nette-palette/zipball/04a8db9924c6bc9518e4e17cca636a7db5cd58ad",
+                "reference": "04a8db9924c6bc9518e4e17cca636a7db5cd58ad",
+                "shasum": ""
+            },
+            "require": {
+                "latte/latte": "~2.3",
+                "nette/application": "~2.3",
+                "nette/di": "~2.3",
+                "pavlista/palette": "~2.3",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Pavlista",
+                    "homepage": "http://www.pavlista.cz/"
+                }
+            ],
+            "description": "Palette support for Nette Framework and Latte template engine",
+            "homepage": "https://github.com/MichaelPavlista/nette-palette",
+            "keywords": [
+                "gd",
+                "image",
+                "imagick",
+                "latte",
+                "nette",
+                "thumbnail",
+                "watermark"
+            ],
+            "time": "2016-05-24 09:05:15"
+        },
+        {
+            "name": "pavlista/palette",
+            "version": "v2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MichaelPavlista/palette.git",
+                "reference": "e6ce26cd05a97868b2e083ffb6976a9ce2c3fcd7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MichaelPavlista/palette/zipball/e6ce26cd05a97868b2e083ffb6976a9ce2c3fcd7",
+                "reference": "e6ce26cd05a97868b2e083ffb6976a9ce2c3fcd7",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gd": "*",
+                "ext-mbstring": "*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "ext-imagick": "*",
+                "nette/tester": "~1.3"
+            },
+            "suggest": {
+                "ext-imagick": "For support cmyk images, better performance and Utils/Compare tool."
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Pavlista",
+                    "homepage": "http://www.pavlista.cz/"
+                }
+            ],
+            "description": "An on-demand image handling and manipulation library",
+            "homepage": "https://github.com/MichaelPavlista/palette",
+            "keywords": [
+                "gd",
+                "image",
+                "imagick",
+                "nette",
+                "thumbnail",
+                "watermark"
+            ],
+            "time": "2016-05-24 08:49:55"
         },
         {
             "name": "tracy/tracy",

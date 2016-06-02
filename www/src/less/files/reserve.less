@@ -1,0 +1,33 @@
+.reserve{ max-width: 500px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) }
+.reserve .text{ text-align: center}
+.reserve .item{ font-size: 2rem; text-align: center; margin: 0.5em 0 1.6em }
+.reserve form{ }
+.reserve form .title:first-letter{ text-transform: uppercase }
+.reserve form .input{ font-size: 1.5rem; text-align: center; width: 18em; border: none; border-bottom: solid 1px @lightgrey; transition: background 300ms }
+.reserve form .input:focus{ outline: none; }
+.reserve form .button{ border: solid 1px @green }
+
+.reserve .input:hover + .line,
+.reserve .input:focus + .line{
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  -o-transform: scaleX(1);
+  transform: scaleX(1);
+}
+.reserve .line{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: @black;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all .3s ease-in-out 0s;
+  -o-transition: all .3s ease-in-out 0s;
+  transition: all .3s ease-in-out 0s;}

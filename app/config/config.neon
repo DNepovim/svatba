@@ -20,3 +20,11 @@ session:
 
 services:
 	router: App\RouterFactory::createRouter
+
+extensions:
+    palette: NettePalette\PaletteExtension
+
+palette:
+    path: '/www/dist/img/thumbnails/'
+    url: 'http://svatbamartinkyalukase.dev/dist/img/thumbnails/'
+    basepath: 'www/sites/svatbamartinkyalukase/wwwroot/'
