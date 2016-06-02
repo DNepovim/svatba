@@ -1,0 +1,82 @@
+{block title}Dary{/block}
+{block content}
+    <div class="filters container">
+    <div class="sort buttons-box" xmlns:n="http://www.w3.org/1999/xhtml">
+        <p class="text">Seřadit podle</p><!--
+        --><button class="rule" data-sort-value="title">názvu</button><!--
+        --><button class="rule" data-sort-value="cost">ceny</button>
+    </div>
+    <div class="filter buttons-box" xmlns:n="http://www.w3.org/1999/xhtml">
+        <p class="text">Zobrazit</p><!--
+        --><button class="rule" data-filter="">vše</button><!--
+        --><button class="rule" data-filter=".not-reserved">volné</button><!--
+        --><button class="rule" data-filter=".reserved">rezervované</button>
+    </div>
+    </div>
+    {snippet reserveForm}
+        {*{control daryForm}*}
+    {/snippet}
+    <div class="container gifts">
+        {foreach $gifts as $item}
+            <div n:class="item, $item->reserved == 1 ? reserved : not-reserved" data-category="{!$item->cost_int}">
+                <h2 class="title" n:if="!empty($item->name)">{!$item->name}</h2>
+                {if is_file($absPath.'/dist/img/dary/'.$item->id.'.jpg')}
+                    <img class="thumb" height="170" src="{$baseUrl}/dist/img/dary/{$item->id}.jpg">
+                {/if}
+                <p class="desc" n:if="!empty($item->description)">{!$item->description}</p>
+                <p class="cost" n:if="!empty($item->cost)">{!$item->cost}</p>
+                <a class="link" href="{!$item->tips}" n:if="!empty($item->tips)" target="_blank">Kde koupit?</a>
+                {if !$item->reserved}
+                    <a class="button call ajax" n:href="Dary:edit $item->id">rezervovat</a>
+                {else}
+                    <p class="button disabled">již rezervováno</p>
+                {/if}
+            </div>
+        {/foreach}
+    </div>
+{/block}
+{block scripts}
+    <script type="text/javascript" src="/www/dist/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="/www/dist/js/isotope.pkgd.min.js"></script>
+    <script n:syntax="off">
+        // init Isotope
+        var $grid = $('.gifts').isotope({
+            itemSelector: '.item',
+            masonry: {
+                columnWidth: 100,
+                fitWidth: true
+            },
+            getSortData: {
+                title: '.title',
+                cost: '[data-category] parseInt',
+            }
+        });
+
+        // bind filter button click
+        $('.filter').on('click', 'button', function () {
+            var filterValue = $(this).attr('data-filter');
+            $grid.isotope({filter: filterValue});
+        });
+
+        // bind sort button click
+        $('.sort').on('click', 'button', function () {
+            var sortValue = $(this).attr('data-sort-value');
+            $grid.isotope({sortBy: sortValue});
+        });
+
+        // change is-checked class on buttons
+        $('.buttons-box').each(function (i, buttonGroup) {
+            var $buttonGroup = $(buttonGroup);
+            $buttonGroup.on('click', 'button', function () {
+                $buttonGroup.find('.is-checked').removeClass('is-checked');
+                $(this).addClass('is-checked');
+            });
+        });
+    </script>
+    <script type="text/javascript" src="/www/dist/js/nette.ajax.js"></script>
+    <script>
+//        $(function () {
+//            $.nette.init();
+//        });
+    </script>
+{/block}
