@@ -20,16 +20,15 @@
     </div>
     </div>
     <div n:foreach="$flashes as $flash"
-         class='flash {$flash->type}'>{$flash->message}
+         class='message flash {$flash->type}'>{$flash->message}
     </div>
+    <div class="message inform">Chybí vám tu něco? Napište svědkyni Martině Vančové na e-mail <a href="mailto:vancova.martina@seznam.cz">vancova.martina@seznam.cz</a> </div>
     <div class="container gifts">
         {foreach $gifts as $item}
             <div n:class="item, $item->reserved == 1 ? reserved : not-reserved" data-category="{!$item->cost_int}">
                 <h2 class="title" n:if="!empty($item->name)">{!$item->name}</h2>
                 {if is_file($absPath.'/dist/img/dary/'.$item->id.'.jpg')}
-                    {*<img class="thumb" height="auto" src="{$baseUrl}/dist/img/dary/{$item->id}.jpg">*}
-                    {var $img = $baseUrl.'/dist/img/dary/'.$item->'id.jpg'}
-                    <img class="thumb" src="{'$img@Resize;150;150;exact'}">
+                    <div class="thumb" style="background: url('{$baseUrl}/dist/img/dary/{$item->id}.jpg') center center / contain no-repeat"></div>
                 {/if}
                 <p class="desc" n:if="!empty($item->description)">{!$item->description}</p>
                 <p class="cost" n:if="!empty($item->cost)">{!$item->cost}</p>

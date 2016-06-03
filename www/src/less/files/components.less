@@ -3,3 +3,9 @@
 .button.call:hover, .button.call:focus { color: white; background: @green; }
 .button.disabled {border-top: solid 1px @grey;border-bottom: solid 1px @grey;}
 .container {width: 100vw}
+.message { text-align: center; width: 70vw; margin: 1em auto 2em;  padding: 0.32em 2em; }
+.message.success { background: @lightgreen; color: @green; border-top: solid 1px @green;border-bottom: solid 1px @green;}
+.message.error{ background: @lightorange; color: @orange; border-top: solid 1px @orange;border-bottom: solid 1px @orange;}
+.message.inform{ background: @lightergrey; color: @black; border-top: solid 1px @black;border-bottom: solid 1px @black;}
+.message.inform a {color: @blue; border: solid 1px transparent; transition: border 300ms}
+.message.inform a:hover {border-top: solid 1px @blue; border-bottom: solid 1px @blue}

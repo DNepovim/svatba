@@ -92,6 +92,8 @@ class DaryPresenter extends Nette\Application\UI\Presenter
         if (!empty($item->tips)) {
             $body .= $giftName . " můžete koupit třeba <a href='" . $item->tips . "'>zde</a>.<br><br>";
         }
+        $body .= 'Hlavně si ho, až nastane náš velký den, nezapoměňte doma.<br><br>Tak na svatbě naviděnou.';
+
         $mail = new Message;
         $mail->setFrom('vancova.martina@seznam.cz')
             ->addTo($target)
