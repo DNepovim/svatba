@@ -38,7 +38,7 @@ gulp.task('styles', function () {
         .pipe(less())
         .pipe(sourcemaps.init())
         .pipe(postcss([autoprefixer({browsers: ['last 2 versions']})]))
-        .pipe(sourcemaps.write('.'))
+        .pipe(sourcemaps.write('Chrome >= 35, Firefox >= 38, Edge >= 12, Explorer >= 9, iOS >= 8, Safari >= 8, Android 2.3, Android >= 4, Opera >= 12'))
         .pipe(rename('style.css'))
         .pipe(gulp.dest(dist + 'css/'))
         .pipe(rename('style.min.css'))

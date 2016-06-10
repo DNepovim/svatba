@@ -1271,7 +1271,7 @@ ul {
 .message {
   text-align: center;
   width: 70vw;
-  margin: 1em auto 2em;
+  margin: 1em auto;
   padding: 0.32em 2em;
 }
 .message.success {
@@ -1287,7 +1287,6 @@ ul {
   border-bottom: solid 1px #FF0300;
 }
 .message.inform {
-  background: #f2f2f2;
   color: black;
   border-top: solid 1px black;
   border-bottom: solid 1px black;
@@ -1494,12 +1493,16 @@ ul {
   border-top: solid 1px #c9c9c9;
   border-bottom: solid 1px #c9c9c9;
 }
+.message.inform {
+  border: none;
+}
 .reserve {
   max-width: 500px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
 }
 .reserve .text {
   text-align: center;
@@ -1544,4 +1547,4 @@ ul {
   transition: all 0.3s ease-in-out 0s;
 }
 
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=Chrome >= 35, Firefox >= 38, Edge >= 12, Explorer >= 9, iOS >= 8, Safari >= 8, Android 2.3, Android >= 4, Opera >= 12/index.css.map */
