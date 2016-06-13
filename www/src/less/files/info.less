@@ -1,0 +1,38 @@
+.iconbox{ overflow:auto; text-align:right }
+.iconbox .contactbox{ padding:2rem 0; }
+.iconbox .contactbox .face{ float:left; width:30%; max-height:100%; margin:0; border-radius:50%; filter:grayscale(0.5) }
+.iconbox .contactbox .text{ margin:0.5em 0 0 35%; text-align:left }
+.iconbox .contactbox .text.position{ margin:0 0 0 35% }
+.iconbox .contactbox .text.name{ font-size:1.5rem; margin:0 0 1rem 35% }
+.iconbox .contactbox .text .ico{ width:1em; }
+.iconbox .contactbox .text.link{ display:block; color:@black; border-bottom:solid 1px transparent; transition:border 300ms }
+.iconbox .contactbox .text.link:hover{ display:block; color:@black; border-bottom:solid 1px @black }
+.iconbox .content{ display:flex; flex-wrap:wrap; width:100%; align-items:center }
+.iconbox .content .picture{ height: 300px; margin:0}
+.iconbox .content .picture .image{ max-width: 100% ; height: auto; margin:0}
+.iconbox .content .picture .caption { color: grey; font-size: 0.6rem; text-align:center}
+.iconbox .content .address {text-align:center; bottom: 40px}
+.iconbox .title{ font-size:2.25rem; font-weight:100; text-align:center; margin:1em 0 0 }
+.iconbox .image{ padding:0 2rem; margin:16px 0 }
+.iconbox .image .icon{ filter:grayscale(0.5); height:auto; width:100% }
+.iconbox .center{ text-align:center }
+.iconbox .table { width:100%; margin: 2rem  0}
+.iconbox .table tr {height:1.8rem}
+.iconbox .table tr td:first-of-type {width:40%; text-align:center}
+.iconbox .table tr td:last-of-type {width:60%; text-align:left}
+.iconbox:nth-of-type(odd) .text{ text-align:left }
+@media @media-s-max{
+  .iconbox .image{ width:100% }
+  .iconbox .image .icon{ width:30%; margin:1rem 35% }
+  .iconbox .text{ order: 2; width: 90%; margin: 1rem 5%; text-align:center }
+  .iconbox .content .picture{ height: auto; margin:0}
+  .iconbox .content .address {bottom:0;}
+}
+@media @media-xs-max{
+  .iconbox .contactbox .face{ float:none; margin:1rem 35%; }
+  .iconbox .contactbox .text{ width: 90%; margin:0.5em 5% 0; text-align:center }
+  .iconbox .contactbox .text.position{ margin:0 5% }
+  .iconbox .contactbox .text.name{ margin:0 5% }
+}
+//
+.map{ width:100%; height:350px; margin:50px 0 }

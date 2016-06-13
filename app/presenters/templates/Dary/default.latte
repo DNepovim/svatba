@@ -1,11 +1,6 @@
 {block title}Dary{/block}
 {block content}
-    <nav class="nav" role="navigation">
-        <a class="item" href="/">Úvod</a><!--
-    --><a class="item" href="/">Praktické informace</a><!--
-    --><a class="item" href="/">Jak šel čas</a><!--
-    --><a class="item active" href="/dary">Svatební dary</a>
-    </nav>
+    {include ../menu.latte current => 'dary'}
     <div class="message inform">
         <div class="line">
             <svg class="svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -81,19 +76,14 @@
     <div class="filters container">
         <div class="sort buttons-box" xmlns:n="http://www.w3.org/1999/xhtml">
             <p class="text">Seřadit podle</p><!--
-        -->
-            <button class="rule" data-sort-value="title">názvu</button><!--
-        -->
-            <button class="rule" data-sort-value="cost">ceny</button>
+        --><button class="rule" data-sort-value="title">názvu</button><!--
+        --><button class="rule" data-sort-value="cost">ceny</button>
         </div>
         <div class="filter buttons-box" xmlns:n="http://www.w3.org/1999/xhtml">
             <p class="text">Zobrazit</p><!--
-        -->
-            <button class="rule" data-filter="">vše</button><!--
-        -->
-            <button class="rule" data-filter=".not-reserved">volné</button><!--
-        -->
-            <button class="rule" data-filter=".reserved">rezervované</button>
+        --><button class="rule" data-filter="">vše</button><!--
+        --><button class="rule" data-filter=".not-reserved">volné</button><!--
+        --><button class="rule" data-filter=".reserved">rezervované</button>
         </div>
     </div>
     <div n:foreach="$flashes as $flash"
