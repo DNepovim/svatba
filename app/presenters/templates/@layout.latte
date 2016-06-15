@@ -6,14 +6,18 @@
 
     <title>{ifset title}{include title|striptags}&nbsp;&hearts;&nbsp;Martinka&nbsp;&amp;&nbsp;Lukáš{/ifset}</title>
     <link rel="stylesheet" type="text/css" href="/www/dist/css/style.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Great+Vibes|Courgette&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Great+Vibes|Courgette&subset=latin,latin-ext'
+          rel='stylesheet' type='text/css'>
+    {block styles}
+    {/block}
 </head>
 <body>
 
 {include content}
 
 <footer class="footer">
-    S <span class="hearts">&hearts;</span> vytvořil <a class="link" href="http://www.dombl.cz" target="_blank">Dominik Bláha</a>
+    S <span class="hearts">&hearts;</span> vytvořil <a class="link" href="http://www.dombl.cz" target="_blank">Dominik
+        Bláha</a>
 </footer>
 
 {block scripts}

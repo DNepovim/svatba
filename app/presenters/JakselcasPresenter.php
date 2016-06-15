@@ -8,6 +8,6 @@ use Nette\Mail\Message;
 use Nette\Mail\SendmailMailer;
 
 
-class InformacePresenter extends Nette\Application\UI\Presenter
+class JakselcasPresenter extends Nette\Application\UI\Presenter
 {
 }

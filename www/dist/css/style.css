@@ -1398,6 +1398,28 @@ ul {
     margin: 5px 0;
   }
 }
+.footer {
+  font-family: Verdana, sans-serif;
+  font-size: 0.5rem;
+}
+.footer .hearts {
+  color: firebrick;
+  font-size: 1.1rem;
+  position: relative;
+  top: 0.1rem;
+}
+.footer .link {
+  color: black;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0 0.5em;
+  border-radius: 0.3em;
+  transition: color 200ms, background 200ms;
+}
+.footer .link:hover {
+  color: #f6f3f0;
+  background: firebrick;
+}
 .filters {
   text-align: center;
   padding: 1rem 0;

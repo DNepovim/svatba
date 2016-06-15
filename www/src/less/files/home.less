@@ -1,19 +1,24 @@
-.img{ position: absolute; left: 0; bottom: 0; width: 50vw }
-.img img{ width: 100%; }
-@media (max-width: @second){
-  .img{ position: static; width: 100vw; }
+.img{ position:absolute; left:0; bottom:0; width:50vw }
+.img img{ width:100%; }
+@media (max-width:@second){
+  .img{ position:static; width:100vw; }
 }
-.home{ position: absolute; top: 0; bottom: 0; right: 0; display: flex; justify-content: center; align-items: center; width: 60vw; padding: 20px; }
-.home .content{ text-align: center; }
-.home .content p{ font-size: 24px; }
-.home .content p strong{ font-size: 30px; letter-spacing: 0.2em; }
-.home .content h2{ font-family: 'Great Vibes', cursive; font-size: 72px; font-weight: normal; }
-@media (max-width: @first){
-  .home .content p{ font-size: 18px; }
-  .home .content p strong{ font-size: 24px; }
-  .home .content h2{ font-size: 60px; }
+.home{ position:absolute; top:0; bottom:0; right:0; display:flex; justify-content:center; align-items:center; width:60vw; padding:20px; }
+.home .content{ text-align:center; }
+.home .content p{ font-size:24px; }
+.home .content p strong{ font-size:30px; letter-spacing:0.2em; }
+.home .content h2{ font-family:'Great Vibes', cursive; font-size:72px; font-weight:normal; }
+@media (max-width:@first){
+  .home .content p{ font-size:18px; }
+  .home .content p strong{ font-size:24px; }
+  .home .content h2{ font-size:60px; }
 }
-@media (max-width: @second){
-  .home{ position: static; width: 90vw; padding: 5vw }
-  .home .content h2{ margin: 5px 0 }
+@media (max-width:@second){
+  .home{ position:static; width:90vw; padding:5vw }
+  .home .content h2{ margin:5px 0 }
 }
+//
+.footer{ font-family:Verdana, sans-serif; font-size:0.5rem }
+.footer .hearts{ color:firebrick; font-size:1.1rem; position:relative; top:0.1rem }
+.footer .link{ color:black; font-weight:700; text-decoration:none; padding:0 0.5em; border-radius:0.3em; transition:color 200ms, background 200ms }
+.footer .link:hover{ color:#f6f3f0; background:firebrick; }
